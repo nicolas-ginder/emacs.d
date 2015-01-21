@@ -9,12 +9,27 @@
 
 ;(package-initialize)
 
+(require 'package)
 
 ;; Load bindings config
-(live-load-config-file "bindings.el")
+;;(live-load-config-file "bindings.el")
 ;; packages
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
+(package-initialize)
+
+
+(defun package-require (pkg)
+  "Install a package only if it's not already installed."
+  (when (not (package-installed-p pkg))
+    (package-install pkg)))
+
+
+(package-require 'helm)
+
+(package-require 'color-theme-solarized)
+
+
 ;; helm
 ;(require 'helm)
 ;(require 'helm-config)
