@@ -20,9 +20,10 @@
 (package-require 'helm-swoop)
 (package-require 'cyberpunk-theme)
 (package-require 'dired+)
-
+(package-require 'js2-mode)
 
 (load-theme 'cyberpunk t)
 (helm-mode t)
 (helm-autoresize-mode t)
+(add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
