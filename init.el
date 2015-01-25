@@ -21,6 +21,7 @@
 (package-require 'cyberpunk-theme)
 (package-require 'dired+)
 (package-require 'js2-mode)
+(package-require 'restclient)
 
 (load-theme 'cyberpunk t)
 (helm-mode t)
