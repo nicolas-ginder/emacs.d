@@ -22,9 +22,20 @@
 (package-require 'dired+)
 (package-require 'js2-mode)
 (package-require 'restclient)
+(package-require 'rainbow-delimiters)
 
+(tool-bar-mode -1)
 (load-theme 'cyberpunk t)
 (helm-mode t)
 (helm-autoresize-mode t)
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+
+;; Backup files to temp
+(setq backup-directory-alist
+      `((".*" . ,temporary-file-directory)))
+(setq auto-save-file-name-transforms
+      `((".*" ,temporary-file-directory t)))
+
+
+(add-hook 'js2-mode-hook 'rainbow-delimiters-mode)
 
