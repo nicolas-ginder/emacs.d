@@ -21,7 +21,7 @@
 (package-require 'cyberpunk-theme)
 (package-require 'dired+)
 (package-require 'js2-mode)
-(package-require 'restclient)
+;(package-require 'restclient)
 (package-require 'rainbow-delimiters)
 
 (tool-bar-mode -1)
