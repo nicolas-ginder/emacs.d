@@ -8,7 +8,7 @@
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
 (package-initialize)
-
+;(package-refresh-contents)
 
 (defun package-require (pkg)
   "Install a package only if it's not already installed."
@@ -21,7 +21,7 @@
 (package-require 'cyberpunk-theme)
 (package-require 'dired+)
 (package-require 'js2-mode)
-;(package-require 'restclient)
+(package-require 'restclient)
 (package-require 'rainbow-delimiters)
 
 (tool-bar-mode -1)
