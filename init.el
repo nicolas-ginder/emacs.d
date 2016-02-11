@@ -3,7 +3,6 @@
 ;(add-to-list 'default-frame-alist '(width . 150))
 
 (require 'package)
-
 ;; packages
 (add-to-list 'package-archives '("marmalade" . "https://marmalade-repo.org/packages/"))
 (add-to-list 'package-archives '("melpa" . "http://melpa.milkbox.net/packages/"))
@@ -26,8 +25,8 @@
 
 (tool-bar-mode -1)
 (load-theme 'cyberpunk t)
-(helm-mode t)
-(helm-autoresize-mode t)
+
+;; javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
 
 ;; Backup files to temp
@@ -41,3 +40,9 @@
 
 (setq inferior-lisp-program "/opt/sbcl/bin/sbcl")
 (setq slime-contribs '(slime-fancy))
+
+;; helm
+(require 'helm)
+(define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
+(helm-mode t)
+(helm-autoresize-mode t)
