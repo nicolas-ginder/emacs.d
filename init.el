@@ -22,6 +22,7 @@
 (package-require 'js2-mode)
 (package-require 'restclient)
 (package-require 'rainbow-delimiters)
+(package-require 'jq-mode)
 
 (tool-bar-mode -1)
 (load-theme 'cyberpunk t)
@@ -46,3 +47,5 @@
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
 (helm-mode t)
 (helm-autoresize-mode t)
+(global-set-key (kbd "M-i") 'helm-swoop)
+(global-set-key (kbd "M-I") 'helm-show-kill-ring)
