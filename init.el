@@ -39,3 +39,5 @@
 
 (add-hook 'js2-mode-hook 'rainbow-delimiters-mode)
 
+(setq inferior-lisp-program "/opt/sbcl/bin/sbcl")
+(setq slime-contribs '(slime-fancy))
