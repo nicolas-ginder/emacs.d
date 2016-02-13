@@ -15,7 +15,7 @@
     (package-install pkg)))
 
 
-(package-require 'helm)
+;(package-require 'helm)
 (package-require 'helm-swoop)
 (package-require 'cyberpunk-theme)
 (package-require 'dired+)
@@ -25,7 +25,7 @@
 (package-require 'jq-mode)
 
 (tool-bar-mode -1)
-(load-theme 'cyberpunk t)
+(load-theme 'cyberpunk 1)
 
 ;; javascript
 (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
@@ -45,7 +45,9 @@
 ;; helm
 (require 'helm)
 (define-key helm-map (kbd "<tab>") 'helm-execute-persistent-action)
-(helm-mode t)
-(helm-autoresize-mode t)
+(helm-mode 1)
+(helm-autoresize-mode 1)
 (global-set-key (kbd "M-i") 'helm-swoop)
 (global-set-key (kbd "M-I") 'helm-show-kill-ring)
+(global-set-key (kbd "M-x") 'helm-M-x)
+(global-set-key (kbd "C-x C-f") 'helm-find-files)
